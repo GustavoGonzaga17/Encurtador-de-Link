@@ -1,0 +1,149 @@
+@import url(./reset.css); /*RESET CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font: "Poppins", sans-serif;
+    --padding-principal: 0 110px;
+    --font-size-base: 16px;
+    --primary-color: #395144;
+    --second-color: #F0EBCE;
+    --third-color: #FFF;
+    --background-color: #DDD9CE;
+    --footer-color: #1E1E1E;
+}
+
+body {
+    font-family: var(--font);
+    font-size: var(--font-size-base);
+    background-color: var(--background-color);
+    padding-top: 18px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+
+}
+
+.header,
+.capa,
+.shortener,
+.list,
+.footer__content {
+    max-width: 1060px;
+}
+
+/*ELEMENTOS COM FLEXBOX*/
+
+.capa,
+.shortener,
+.list__list,
+.list__list-item,
+.footer,
+.footer__content {
+    display: flex;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.capa {
+    justify-content: space-between;
+    margin: 18px 0;
+    align-items: center;
+}
+
+.capa__text {
+    max-width: 520px;
+}
+
+.capa__text-title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 17px;
+}
+
+.capa__text-parag {
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.shortener {
+    background-color: var(--primary-color);
+    padding: 59px 90px;
+    border-radius: 15px;
+    gap: 20px;
+}
+
+.shortener__input {
+    padding: 1em;
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    border: none;
+}
+
+.shortener__button {
+    text-decoration: none;
+    background-color: var(--second-color);
+    padding: 0.5em;
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+}
+
+.list__list {
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    padding: 52px 0;
+}
+
+.list__list-item {
+    padding: 1.5em;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.list__list-item-linkShort,
+.list__list-item-link {
+    width: 40%;
+    word-break: break-all
+}
+
+.list__list-item-button {
+    background-color: var(--primary-color);
+    color: var(--second-color);
+    padding: 0.5em;
+    border-radius: 10px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.footer {
+    background-color: #1E1E1E;
+    width: 100vw;
+    padding: 2em 110px;
+    justify-content: center;
+}
+
+.footer__content {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer__content>p,
+.footer__content>p>a {
+    color: var(--third-color);
+}
