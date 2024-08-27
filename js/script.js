@@ -59,13 +59,25 @@ function addItem (longLink, shortLink) {
     newLink.textContent = shortLink
     newLink.href = shortLink
 
-    const buttonCopy = document.createElement('a')
+    const buttonCopy = document.createElement('button')
     buttonCopy.className = 'list__list-item-button'
     buttonCopy.textContent = 'Copiar'
+
+    buttonCopy.addEventListener ('click', () => {
+        copyText(shortLink)
+    })
     
     list.appendChild(itemList)
     itemList.appendChild(originalLink)
     itemList.appendChild(newDiv)
     newDiv.appendChild(newLink)
     newDiv.appendChild(buttonCopy)
+}
+
+async function copyText (text) {
+   try {
+    await navigator.clipboard.writeText(text);
+   } catch (error) {
+    console.log(`Erro ao copiar o texto`)
+   } 
 }
